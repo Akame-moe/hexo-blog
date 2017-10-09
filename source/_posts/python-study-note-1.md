@@ -1,7 +1,7 @@
 ---
 title: python学习笔记-1
 date: 2016-12-20 14:43:28
-tags: Python
+tags: [Python,Note]
 ---
 
 
@@ -10,6 +10,7 @@ tags: Python
 - 对于单个字符的编码，Python提供了ord()函数获取字符的整数表示，chr()函数把编码转换为对应的字符：  
 - 要注意区分'ABC'和b'ABC'，前者是str，后者虽然内容显示得和前者一样，但bytes的每个字符都只占用一个字节。  
 - 以Unicode表示的str通过encode()方法可以编码为指定的bytes，例如：  
+<!--more-->
 
 		>>>'ABC'.encode('ascii')
 		b'ABC'

@@ -22,6 +22,7 @@ npm install --save express
 npm install --save socket.io
 ```
 
+<!--more-->
 安装完成后你会在工程目录看见有自动生成的node_modules文件夹
 
 ### 4.编写index.js代码 ###

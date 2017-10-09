@@ -15,6 +15,7 @@ httpmime-4.3.6.jar
 ### 二、服务端接收代码 ###
 **使用的是strtus2框架**
 
+<!--more-->
 UploadAction:
 ```java
 public class UploadAction extends BaseAction {  

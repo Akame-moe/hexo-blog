@@ -86,6 +86,7 @@ public class PhonelistenService extends Service {
 }  
 ```
 
+<!--more-->
 ### 2.添加权限 ###
 
 ```xml

@@ -43,6 +43,8 @@ tags: Java
 
 - 获取当前毫秒数使用 System.currentTimeMillis()， System.nanoTime() 产生的值仅用于比较，同一时刻不同虚拟机 System.nanoTime() 返回的值可能不一样并且相差很大，笔者的同事已经踩过一次坑，关于 nanoTime 诸位可以看一看 JavaDoc 。
 
+<!--more-->
+
 ### 异常处理 ###
 
 - 不要捕获 Java 类库中定义的继承自 RuntimeException 的运行时异常类，如： IndexOutOfBoundsException / NullPointerException ，这类异常由程序员预检查来规避，保证程序健壮性。说到这里，异常继承结构图也可以看下。

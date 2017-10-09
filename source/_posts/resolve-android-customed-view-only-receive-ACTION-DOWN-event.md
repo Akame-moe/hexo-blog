@@ -8,6 +8,7 @@ tags: Android
 发现只响应了Activity 里的ACTION_UP 和 ACTION_DOWN
 View里只有DOWN的事件，怎么都是调不出来。后来我在view里设置chickable =true；问题解决了。
 
+<!--more-->
 ```java
 @Override  
 public boolean onTouchEvent(MotionEvent event) {  
