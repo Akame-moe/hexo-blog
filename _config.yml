@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 斩赤红之瞳
+title: 屡教不改的胡某某
 subtitle: 不积跬步无以至千里&不积小流无以成江海
 description: Time for a true display of skill
 author: Akame-moe
@@ -41,7 +41,7 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace:
+  tab_replace: false
   
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

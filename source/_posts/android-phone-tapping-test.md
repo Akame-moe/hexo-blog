@@ -122,7 +122,7 @@ public class BootReceiver extends BroadcastReceiver {
 ```xml
 <receiver android:name="com.amy.phonelistener.BootReceiver">  
    <intent-filter >  
-	   <action android:name="android.intent.action.BOOT_COMPLETED"/>  
+       <action android:name="android.intent.action.BOOT_COMPLETED"/>  
    </intent-filter>  
 </receiver> 
 ```
@@ -135,9 +135,9 @@ public class BootReceiver extends BroadcastReceiver {
 @Override  
 public void onDestroy() {  
 
-	Intent intent = new Intent(this,OtherPhonelistenService.class);  
-	startService(intent);  
-	super.onDestroy();  
+    Intent intent = new Intent(this,OtherPhonelistenService.class);  
+    startService(intent);  
+    super.onDestroy();  
 }  
 ```
 

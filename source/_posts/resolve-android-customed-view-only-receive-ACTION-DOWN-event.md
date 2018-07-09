@@ -12,32 +12,32 @@ View里只有DOWN的事件，怎么都是调不出来。后来我在view里设�
 ```java
 @Override  
 public boolean onTouchEvent(MotionEvent event) {  
-	switch (event.getAction()) {  
-	case MotionEvent.ACTION_DOWN:  
-		x1 = event.getX();  
-		y1 = event.getY();  
-		Log.i("Touch", "MyView ------- > onTouchEvent DOWN");  
-		break;  
-	case MotionEvent.ACTION_UP:  
-		x2 = event.getX();  
-		y2 = event.getY();  
-		if(y1 - y2 > 50) {  
-			moveUp();  
-		} else if(y2 - y1 > 50) {  
-			moveDown();  
-		} else if(x1 - x2 > 50) {  
-			moveLeft();  
-		} else if(x2 - x1 > 50) {  
-			moveRight();  
-		}  
-		Log.i("Touch", "MyView ------- > onTouchEvent UP");  
-		break;  
-	default:  
-		break;  
-	}  
-	Log.i("Touch", "MyView ------- > onTouchEvent");  
-	  
-	return super.onTouchEvent(event);  
+    switch (event.getAction()) {  
+    case MotionEvent.ACTION_DOWN:  
+        x1 = event.getX();  
+        y1 = event.getY();  
+        Log.i("Touch", "MyView ------- > onTouchEvent DOWN");  
+        break;  
+    case MotionEvent.ACTION_UP:  
+        x2 = event.getX();  
+        y2 = event.getY();  
+        if(y1 - y2 > 50) {  
+            moveUp();  
+        } else if(y2 - y1 > 50) {  
+            moveDown();  
+        } else if(x1 - x2 > 50) {  
+            moveLeft();  
+        } else if(x2 - x1 > 50) {  
+            moveRight();  
+        }  
+        Log.i("Touch", "MyView ------- > onTouchEvent UP");  
+        break;  
+    default:  
+        break;  
+    }  
+    Log.i("Touch", "MyView ------- > onTouchEvent");  
+      
+    return super.onTouchEvent(event);  
 }  
 ```
 

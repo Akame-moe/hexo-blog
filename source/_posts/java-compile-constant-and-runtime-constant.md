@@ -7,16 +7,16 @@ tags: [Java,Note]
 看下面一段代码：
 ```java
 public class Test1 {
-	public static void main(String args[]){
-		System.out.println(FinalTest.x);
-	}
+    public static void main(String args[]){
+        System.out.println(FinalTest.x);
+    }
 }
 
 class FinalTest{
-	public static final int x =6/3;
-	static {
-		System.out.println("FinalTest static block");
-	}
+    public static final int x =6/3;
+    static {
+        System.out.println("FinalTest static block");
+    }
 }
 ```
 
@@ -25,16 +25,16 @@ class FinalTest{
 
 ```java
 public class Test2 {
-	public static void main(String args[]){
-		System.out.println(FinalTest2.x);
-	}
+    public static void main(String args[]){
+        System.out.println(FinalTest2.x);
+    }
 }
 class FinalTest2{
 
-	public static final int x =new Random().nextInt(100);
-	static {
-		System.out.println("FinalTest2 static block");
-	}
+    public static final int x =new Random().nextInt(100);
+    static {
+        System.out.println("FinalTest2 static block");
+    }
 }
 ```
 
@@ -54,18 +54,18 @@ FinalTest2 static block
 
 ```java
 public class Singleton {
-	private static Singleton singleton = new Singleton();
-	public static int counter1;
-	public static int counter2 = 0;
+    private static Singleton singleton = new Singleton();
+    public static int counter1;
+    public static int counter2 = 0;
 
-	private Singleton() {
-		counter1++;
-		counter2++;
-	}
+    private Singleton() {
+        counter1++;
+        counter2++;
+    }
 
-	public static Singleton getSingleton() {
-		return singleton;
-	}
+    public static Singleton getSingleton() {
+        return singleton;
+    }
 
 }
 ```
@@ -74,11 +74,11 @@ public class Singleton {
 
 ```java
 public class TestSingleton {
-	public static void main(String args[]){
-		Singleton singleton = Singleton.getSingleton();
-		System.out.println("counter1="+singleton.counter1);
-		System.out.println("counter2="+singleton.counter2);
-	}
+    public static void main(String args[]){
+        Singleton singleton = Singleton.getSingleton();
+        System.out.println("counter1="+singleton.counter1);
+        System.out.println("counter2="+singleton.counter2);
+    }
 }
 ```
 
