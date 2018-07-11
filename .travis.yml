@@ -14,7 +14,8 @@ before_install:
   - git config --global user.email "me@gentlehu.com"
 
 install:
-  - npm install hexo -g
+  - npm install
+  - npm install hexo --save
   
 script:
   - hexo clean
