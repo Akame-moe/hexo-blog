@@ -14,13 +14,16 @@
     <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
     <%- partial('_partial/after-footer') %>
   </div>
-  <!--custom  start-->
-  <script src="/js/assistant.min.js"></script>
   <script src="/js/script.js"></script>
-  <script src="/js/love.min.js"></script>
-  <canvas id="pio" width="280" height="250"></canvas>
-  <script src='/js/live2d.js'></script>
-  <script>loadlive2d('pio', '/assets/pio/model-3.json');</script>
+
+  <!--custom  start-->
+  <% if (config.live2d.enable){ %>
+    <canvas id="pio" width="280" height="250"></canvas>
+    <script src='/js/live2d.js'></script>
+    <script>loadlive2d('pio', '<%- config.live2d.modeljson %>');</script>
+  <% } %>
+  <script src="/js/customized.js"></script>
   <!--custom end-->
+
 </body>
 </html>
