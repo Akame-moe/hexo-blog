@@ -23,7 +23,7 @@ script:
   - git init
   - git add .
   - git commit "auto deploy by travis-ci"
-  - git push "https://Alisa_Destiny:${CODING_TOKEN}@${CODING_REF}" master:master
+  - git push --force "https://Alisa_Destiny:${CODING_TOKEN}@${CODING_REF}" master:master
   
 after_success:
   - echo "deploy successfully"
