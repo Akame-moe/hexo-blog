@@ -8,8 +8,8 @@ tags: [nginx,js]
 最近自己做了个图床，想要预览所有上传的图片于是开启了nginx的目录浏览功能，但是目录下面展示的是图片链接
 ，我想要看图片内容的话还需要一个个点进去看，很不方便。
 
-我通过查文档了解到nginx的`http_sub_module`可以在response返回给客户端之前替换内容。所以我想到了利用这个模块添加一个js文件，
-这个js文件功能就是搜索页面的和上的链接，是图片后缀的话就动态生成img标签附加在后面。
+我通过查文档了解到nginx的`http_sub_module`可以在response返回给客户端之前替换内容。所以我想到了利用这个模块添加一个js文件，这个js文件功能就是搜索页面的和上的链接，是图片后缀的话就动态生成img标签附加在后面。
+
 但是写完后我发现还有个问题：有可能某个目录下图片文件有很多，上百个，如果全部自动加载的话会很耗时间和流量。于是我又在这个基础上添加了分页功能，并且利用`details & summary`标签实现了展开和折叠功能。
 
 <!--more-->
@@ -66,7 +66,7 @@ location / {
     pinfo.align='center';
     function changepage(n){
         //if(!dd.hasAttribute('open')){return;}
-        //clear content befor append
+        //clear content before append
         showbox.innerHTML = '';
         for(var i=(n-1)*pagesize;i<n*pagesize;i++){
             if(imglinks[i]){

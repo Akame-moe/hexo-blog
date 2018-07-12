@@ -28,6 +28,9 @@
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
       <%- partial('post/tag') %>
+        <% if (config.rewards.enable && is_post()){ %>
+            <div id="free-reward-panel"><p><%- config.rewards.tips %></p> <div id="btn-support"><%- config.rewards.button_text %></div></div>
+        <% } %>
     </footer>
   </div>
   <% if (!index){ %>

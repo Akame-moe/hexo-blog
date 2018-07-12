@@ -5,6 +5,6 @@
  *     document.write("<script src='/js/some.js'></script>");
  */
 
-document.write("<script src='/js/love.min.js'></script>");
-document.write("<script src='/js/assistant.min.js'></script>");
+//document.write("<script src='/js/love.min.js'></script>");
+document.write("<script src='/js/assistant.js'></script>");
 
